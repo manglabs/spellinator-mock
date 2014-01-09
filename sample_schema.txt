@@ -1,0 +1,37 @@
+Student
+- <id> id
+- <string> name
+
+Quiz
+- <id> id
+- <boolean> is_auto_generated
+- <id> original_quiz_id # Note: to link auto-generated quizzes back to the original quiz
+- <string> title
+- <timestamp> create_date
+
+Quiz_Words
+- <id> id
+- <id> quiz_id
+- <id> word_id
+
+Word
+- <id> id
+- <string> text
+
+Recording
+- <id> id
+- <id> word_id
+- <id> author
+
+QuizResult
+- <id> id
+- <id> student_id
+- <id> quiz_id
+- <timestamp> quiz_taken_date
+
+QuizResultWords
+- <id> id
+- <id> quiz_result_id
+- <id> word_id
+- <integer> status # Note: right or wrong, for starters, but there could be others
+
